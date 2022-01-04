@@ -25,7 +25,7 @@ import android.view.ViewGroup
 
 import io.supercharge.shimmerlayout.ShimmerLayout
 
-class ShimmerViewHolder(inflater: LayoutInflater, parent: ViewGroup, innerViewResId: Int) : RecyclerView.ViewHolder(inflater.inflate(R.layout.viewholder_shimmer, parent, false)) {
+class ShimmerViewHolder(inflater: LayoutInflater, parent: ViewGroup, innerViewResId: Int) : RecyclerView.ViewHolder(inflater.inflate(R.layout.shimmer_viewholder_shimmer, parent, false)) {
 
     private val mShimmerLayout: ShimmerLayout = itemView as ShimmerLayout
 
