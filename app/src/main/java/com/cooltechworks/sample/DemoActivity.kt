@@ -20,8 +20,8 @@
 package com.cooltechworks.sample
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.RecyclerView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import com.cooltechworks.sample.adapters.CardAdapter
 import com.cooltechworks.sample.utils.BaseUtils
 import kotlinx.android.synthetic.main.activity_grid.*
@@ -47,8 +47,9 @@ class DemoActivity : AppCompatActivity() {
         layoutManager = demoConfiguration.layoutManager!!
         setTitle(demoConfiguration.titleResource)
 
-        if (demoConfiguration.itemDecoration != null) {
-            shimmer_recycler_view.addItemDecoration(demoConfiguration.itemDecoration)
+        val itemDecoration = demoConfiguration.itemDecoration
+        if (itemDecoration != null) {
+            shimmer_recycler_view.addItemDecoration(itemDecoration)
         }
 
         mAdapter = CardAdapter()
